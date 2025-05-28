@@ -20,10 +20,7 @@ El proyecto busca estimar el rendimiento agrícola de cultivos como arándano, f
    └── Modelo_Predictivo_por_Cultivo.ipynb # Notebook interactivo con análisis
 📂 gee/
    └── gee_ndvi_ndmi.js                    # Script de Google Earth Engine para NDVI y NDMI
-📂 figuras/
-   └── Figura_Evolucion_Rendimiento_Cultivos.png
-📂 apendices/
-   └── Cronograma_Actividades.xlsx         # Cronograma del proyecto
+
 README.md
 ```
 
