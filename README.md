@@ -12,16 +12,22 @@ El proyecto busca estimar el rendimiento agrícola de cultivos como arándano, f
 ## 📁 Estructura del repositorio
 
 ```
-📂 data/
-   └── Base_Datos_Consolidada.xlsx         # Base final con todas las variables
-📂 scripts/
-   └── modelo_predictivo.py                # Script de predicción por cultivo
-📂 notebooks/
-   └── Modelo_Predictivo_por_Cultivo.ipynb # Notebook interactivo con análisis
-📂 gee/
-   └── gee_ndvi_ndmi.js                    # Script de Google Earth Engine para NDVI y NDMI
+📂 BD_San_Lorenzo_2020-2024.xlsx        # Base original consolidada (clima, suelo, satélite, agrícola)
+📂 base_limpia.xlsx                     # Base depurada para entrenamiento de modelos
+📂 rendimientos_temporales.xlsx         # Rendimiento real vs. predicho por cultivo y año
+📂 importancia_variables.xlsx           # Resultados de importancia de variables en Random Forest
 
-README.md
+📂 notebooks/
+   ├── Limpieza_Unificacion.ipynb       # Procesos de depuración y cruce de variables
+   ├── Entrenamiento_RF.ipynb           # Construcción y evaluación del modelo Random Forest
+   └── Visualizaciones.ipynb            # Gráficos de evolución, comparación y clasificación vegetativa
+
+📂 scripts_js/
+   ├── NDVI_NDMI.js                     # Extracción mensual de índices NDVI y NDMI (Sentinel-2, GEE)
+   ├── Propiedades_Edaficas.js          # Arena, limo, arcilla, pH desde SoilGrids
+   └── Integracion_Climatica.js         # Temperatura, precipitación y radiación solar (ERA5-Land, NASA POWER)
+
+📂README.md                               # Documentación general del repositorio
 ```
 
 ---
@@ -41,7 +47,6 @@ README.md
 Los datos utilizados provienen de fuentes abiertas:
 
 - **NASA POWER** – Variables climáticas históricas
-- **Open-Meteo** – Parámetros diarios por coordenadas
 - **Google Earth Engine** – NDVI y NDMI vía Sentinel-2
 - **SoilGrids** – Datos edáficos de textura y pH
 - **AGRONET Colombia** – Producción y rendimiento por cultivo
